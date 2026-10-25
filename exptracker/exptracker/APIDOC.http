@@ -1,0 +1,56 @@
+### api call for create user
+###
+POST http://127.0.0.1:8000/user
+Content-Type: application/json
+
+{
+    "username":"shibu",
+    "email":"shibu@gmail.com",
+    "password":"shibu123"
+}
+
+#api call for add expense
+###
+POST http://127.0.0.1:8000/expense
+Content-Type: application/json
+Authorization: Basic shibu:shibu123
+
+{
+    "title":"shirt",
+    "amount":"700",
+    "category":"bill",
+    "paymet":"card"
+}
+
+#api call for list expense
+###
+GET http://127.0.0.1:8000/expense
+Authorization: Basic shibu:shibu123
+
+
+#api call for retrive expense
+###
+GET http://127.0.0.1:8000/rud/2
+Authorization: Basic cp:cp123
+
+
+#api call for update expense
+###
+PATCH http://127.0.0.1:8000/rud/1
+Content-Type: application/json
+Authorization: Basic cp:cp123
+
+{
+
+    "amount":"400000"
+}
+
+#api call for dlt expense
+###
+DELETE http://127.0.0.1:8000/rud/1
+Authorization: Basic cp:cp123
+
+#api call for search
+###
+get http://127.0.0.1:8000/expense?title=car
+Authorization: Basic cp:cp123
